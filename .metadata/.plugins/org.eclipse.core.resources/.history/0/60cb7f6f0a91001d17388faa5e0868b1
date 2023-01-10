@@ -1,0 +1,42 @@
+package br.com.rest.math;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.com.rest.converters.NumberConverter;
+import br.com.rest.exceptions.UnsuportedMathOperationException;
+
+public class SimpleMath {
+
+	public Double sum(String numberOne, String numberTwo) throws Exception {
+
+		return NumberConverter.convertTodouble(numberOne) + NumberConverter.convertTodouble(numberTwo);
+	}
+
+	public Double subtraction(String numberOne, String numberTwo) throws Exception {
+
+		return NumberConverter.convertTodouble(numberOne) - NumberConverter.convertTodouble(numberTwo);
+	}
+
+	public Double multiplication(String numberOne, String numberTwo) throws Exception {
+
+		return NumberConverter.convertTodouble(numberOne) * NumberConverter.convertTodouble(numberTwo);
+	}
+
+	public Double division(String numberOne, String numberTwo) throws Exception {
+
+		return NumberConverter.convertTodouble(numberOne) / NumberConverter.convertTodouble(numberTwo);
+	}
+
+	public Double mean(String numberOne, String numberTwo) throws Exception {
+
+		return (NumberConverter.convertTodouble(numberOne) + NumberConverter.convertTodouble(numberTwo)) / 2;
+	}
+
+	public Double mean(@PathVariable(value = "number") String number) throws Exception {
+
+		return (Math.pow(NumberConverter.convertTodouble(number), 2));
+	}
+
+}
