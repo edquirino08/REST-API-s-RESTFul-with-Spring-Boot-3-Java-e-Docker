@@ -2,3 +2,5 @@
 1673356120242	Rename type 'RestWithSpringBootAndJavaApplicationTests'
 1673358883590	Rename package 'br.com.rest.exception'
 1673373364184	Move compilation unit
+1673375240505	Delete elements
+1673375273440	Rename type 'MathController'
