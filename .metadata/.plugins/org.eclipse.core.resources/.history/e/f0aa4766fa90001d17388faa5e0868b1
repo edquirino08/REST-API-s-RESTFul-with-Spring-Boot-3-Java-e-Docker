@@ -1,5 +1,0 @@
-package br.com.rest.converters;
-
-public class NumberConverter {
-
-}
